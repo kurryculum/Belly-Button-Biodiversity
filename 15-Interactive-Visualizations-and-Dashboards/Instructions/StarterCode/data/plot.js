@@ -28,6 +28,7 @@ d3.json("data/samples.json").then((sampleData) => {
     demodata(firstSample);
     demochart(firstSample);
 });
+// create a function optionChanged to make it dropdown menu changed and its taken from index .html and pass local function sample = names
 function optionChanged(sample){
     demodata(sample);
     demochart(sample);
@@ -57,6 +58,7 @@ function demochart(sample) {
         console.log(sampleData);
         var sampleset = sampleData.samples;
         console.log(sampleset);
+        // make sure to double quotes as id is string and either you need + in fornt of id or remove === to make to to == equals
         var filteredSample = sampleset.filter(y => y.id == sample);
         console.log(filteredSample,sample);
         // var otu_ids = filteredSample.otu_ids;
